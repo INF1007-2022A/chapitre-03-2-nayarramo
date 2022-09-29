@@ -43,7 +43,7 @@ def bills(value):
 			ones += value
 			value = 0
 
-	return (twenties, tens, fives, ones);
+	return (twenties, tens, fives, ones)
 
 if __name__ == "__main__":
 	print(dissipated_power(69, 420))
