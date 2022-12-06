@@ -5,11 +5,12 @@ from ast import Num
 
 
 def dissipated_power(voltage, resistance):
-	# TODO: Calculer la puissance dissipée par la résistance.
-	return voltage*voltage/resistance
+	# Calculer la puissance dissipée par la résistance.
+	result = voltage*voltage/resistance
+	return result
 
 def orthogonal(v1, v2):
-	# TODO: Retourner vrai si les vecteurs sont orthogonaux, faux sinon.
+	# Retourner vrai si les vecteurs sont orthogonaux, faux sinon.
 
 	if v1[0] * v2[0] + v1[1] * v2[1] == 0:
 		return True
@@ -18,15 +19,19 @@ def orthogonal(v1, v2):
 
 
 def average(values):
-	# TODO: Calculer la moyenne des valeurs positives (on ignore les valeurs strictement négatives).
+	# Calculer la moyenne des valeurs positives (on ignore les valeurs strictement négatives).
 	list = []
 	for v in values:
 		if v >= 0:
 			list.append(v)
-	return sum(list)/len(list) # La variable v contient une valeur de la liste.
+
+	result = sum(list)/len(list)
+	return result
 
 def bills(value):
-	# TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
+	# Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
+	twenties, tens, fives, ones = 0, 0, 0, 0
+	
 	while value != 0:
 		if value >= 20:
 			twenties = value // 20
